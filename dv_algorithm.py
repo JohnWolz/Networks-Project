@@ -12,8 +12,6 @@ for row in readCSV:
     i+=1
 input_data.remove(input_data[0]) # removes first row (also labels)
 
-print(input_data)
-
 def DistanceVector(input_data):
     for i in range (len(input_data)):
         for j in range(len(input_data[1])):
@@ -31,4 +29,9 @@ def DistanceVector(input_data):
     return input_data
 
 new_distance_vectors = DistanceVector(input_data)
-print(new_distance_vectors)
+
+#output
+print("Distance vector for node x:",input_data[0])
+print("Distance vector for node y:",input_data[1])
+print("Distance vector for node z:",input_data[2])
+

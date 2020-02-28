@@ -19,6 +19,10 @@ def DistanceVector(input_data):
 
                 # finds distance from start node to intermediate node and from intermediate node to end node
                 intermediate_index = (j+1) % len(input_data[i])
+
+                if int(input_data[i][intermediate_index]) == 0: # ensures the intermediate node is not the start node
+                    intermediate_index = (j+2) % len(input_data[i])
+                
                 distance1 = int(input_data[i][intermediate_index])
                 distance2 = int(input_data[intermediate_index][j])
 

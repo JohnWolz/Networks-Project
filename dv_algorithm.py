@@ -1,7 +1,7 @@
 #################################################################
 # Name: John Wolz, Stella Li, Nicole Robles
 # Date: February 29, 2020
-# Description: Distance Vector Algorithm
+# Description: Distance-Vector Routing Algorithm
 #################################################################
 
 import sys
@@ -44,7 +44,7 @@ def DistanceVector(input_data):
 
 new_distance_vectors = DistanceVector(input_data)
 
-#output
+##################### PRINT #####################################
 print("Distance vector for node x:",input_data[0])
 print("Distance vector for node y:",input_data[1])
 print("Distance vector for node z:",input_data[2])

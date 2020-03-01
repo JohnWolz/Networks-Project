@@ -7,7 +7,8 @@
 import sys
 import csv
 
-file = 'topology.csv'
+#file = 'topology.csv'
+file = sys.argv[1]
 
 # read CSV file and import data
 input_data=[]

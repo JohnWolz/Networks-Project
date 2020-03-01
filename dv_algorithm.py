@@ -1,21 +1,31 @@
+#################################################################
+# Name: John Wolz, Stella Li, Nicole Robles
+# Date: February 29, 2020
+# Description: Distance Vector Algorithm
+#################################################################
+
 import sys
 import csv
 
 file = 'topology.csv'
 
+# read CSV file and import data
 input_data=[]
 readCSV = csv.reader(open(file), delimiter=',')
 i = 0
 for row in readCSV:
     input_data.append(row)
-    input_data[i].remove(input_data[i][0]) # shaves off first column (labels)
+    # shave off first column (labels)
+    input_data[i].remove(input_data[i][0])
     i+=1
-input_data.remove(input_data[0]) # removes first row (also labels)
+# removes first row (also labels)
+input_data.remove(input_data[0])
 
 def DistanceVector(input_data):
     for i in range (len(input_data)):
         for j in range(len(input_data[1])):
-            if int(input_data[i][j]) != 0: # do not need to check distance between node and itself
+            # do not need to check distance between node and itself
+            if int(input_data[i][j]) != 0: 
 
                 # finds distance from start node to intermediate node and from intermediate node to end node
                 intermediate_index = (j+1) % len(input_data[i])
